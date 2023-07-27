@@ -1,0 +1,27 @@
+{"_id":{"$oid":"646361c52b960ad03d068cc2"},"department_id":{"$numberInt":"10"},"department_name":"Administration","manager_id":{"$numberInt":"200"},"location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc3"},"department_id":{"$numberInt":"20"},"department_name":"Marketing","manager_id":{"$numberInt":"201"},"location_id":{"$numberInt":"1800"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc4"},"department_id":{"$numberInt":"30"},"department_name":"Purchasing","manager_id":{"$numberInt":"114"},"location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc5"},"department_id":{"$numberInt":"40"},"department_name":"Human Resources","manager_id":{"$numberInt":"203"},"location_id":{"$numberInt":"2400"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc6"},"department_id":{"$numberInt":"50"},"department_name":"Shipping","manager_id":{"$numberInt":"121"},"location_id":{"$numberInt":"1500"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc7"},"department_id":{"$numberInt":"60"},"department_name":"IT","manager_id":{"$numberInt":"103"},"location_id":{"$numberInt":"1400"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc8"},"department_id":{"$numberInt":"70"},"department_name":"Public Relations","manager_id":{"$numberInt":"204"},"location_id":{"$numberInt":"2700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cc9"},"department_id":{"$numberInt":"80"},"department_name":"Sales","manager_id":{"$numberInt":"145"},"location_id":{"$numberInt":"2500"}}
+{"_id":{"$oid":"646361c52b960ad03d068cca"},"department_id":{"$numberInt":"90"},"department_name":"Executive","manager_id":{"$numberInt":"100"},"location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068ccb"},"department_id":{"$numberInt":"100"},"department_name":"Finance","manager_id":{"$numberInt":"108"},"location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068ccc"},"department_id":{"$numberInt":"110"},"department_name":"Accounting","manager_id":{"$numberInt":"205"},"location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068ccd"},"department_id":{"$numberInt":"120"},"department_name":"Treasury","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cce"},"department_id":{"$numberInt":"130"},"department_name":"Corporate Tax","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068ccf"},"department_id":{"$numberInt":"140"},"department_name":"Control And Credit","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd0"},"department_id":{"$numberInt":"150"},"department_name":"Shareholder Services","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd1"},"department_id":{"$numberInt":"160"},"department_name":"Benefits","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd2"},"department_id":{"$numberInt":"170"},"department_name":"Manufacturing","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd3"},"department_id":{"$numberInt":"180"},"department_name":"Construction","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd4"},"department_id":{"$numberInt":"190"},"department_name":"Contracting","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd5"},"department_id":{"$numberInt":"200"},"department_name":"Operations","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd6"},"department_id":{"$numberInt":"210"},"department_name":"IT Support","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd7"},"department_id":{"$numberInt":"220"},"department_name":"NOC","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd8"},"department_id":{"$numberInt":"230"},"department_name":"IT Helpdesk","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cd9"},"department_id":{"$numberInt":"240"},"department_name":"Government Sales","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cda"},"department_id":{"$numberInt":"250"},"department_name":"Retail Sales","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cdb"},"department_id":{"$numberInt":"260"},"department_name":"Recruiting","manager_id":"NULL","location_id":{"$numberInt":"1700"}}
+{"_id":{"$oid":"646361c52b960ad03d068cdc"},"department_id":{"$numberInt":"270"},"department_name":"Payroll","manager_id":"NULL","location_id":{"$numberInt":"1700"}}

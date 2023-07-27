@@ -1,0 +1,4 @@
+{"_id":{"$oid":"646361582b960ad03d068c8e"},"region_id":{"$numberInt":"1"},"region_name":"Europe"}
+{"_id":{"$oid":"646361582b960ad03d068c8f"},"region_id":{"$numberInt":"2"},"region_name":"Americas"}
+{"_id":{"$oid":"646361582b960ad03d068c90"},"region_id":{"$numberInt":"3"},"region_name":"Asia"}
+{"_id":{"$oid":"646361582b960ad03d068c91"},"region_id":{"$numberInt":"4"},"region_name":"Middle East and Africa"}

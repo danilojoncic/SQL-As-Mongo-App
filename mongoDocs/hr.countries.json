@@ -1,0 +1,25 @@
+{"_id":{"$oid":"6463617c2b960ad03d068c92"},"country_id":"AR","country_name":"Argentina","region_id":{"$numberInt":"2"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c93"},"country_id":"AU","country_name":"Australia","region_id":{"$numberInt":"3"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c94"},"country_id":"BE","country_name":"Belgium","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c95"},"country_id":"BR","country_name":"Brazil","region_id":{"$numberInt":"2"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c96"},"country_id":"CA","country_name":"Canada","region_id":{"$numberInt":"2"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c97"},"country_id":"CH","country_name":"Switzerland","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c98"},"country_id":"CN","country_name":"China","region_id":{"$numberInt":"3"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c99"},"country_id":"DE","country_name":"Germany","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c9a"},"country_id":"DK","country_name":"Denmark","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c9b"},"country_id":"EG","country_name":"Egypt","region_id":{"$numberInt":"4"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c9c"},"country_id":"FR","country_name":"France","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c9d"},"country_id":"HK","country_name":"HongKong","region_id":{"$numberInt":"3"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c9e"},"country_id":"IL","country_name":"Israel","region_id":{"$numberInt":"4"}}
+{"_id":{"$oid":"6463617c2b960ad03d068c9f"},"country_id":"IN","country_name":"India","region_id":{"$numberInt":"3"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca0"},"country_id":"IT","country_name":"Italy","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca1"},"country_id":"JP","country_name":"Japan","region_id":{"$numberInt":"3"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca2"},"country_id":"KW","country_name":"Kuwait","region_id":{"$numberInt":"4"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca3"},"country_id":"MX","country_name":"Mexico","region_id":{"$numberInt":"2"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca4"},"country_id":"NG","country_name":"Nigeria","region_id":{"$numberInt":"4"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca5"},"country_id":"NL","country_name":"Netherlands","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca6"},"country_id":"SG","country_name":"Singapore","region_id":{"$numberInt":"3"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca7"},"country_id":"UK","country_name":"United Kingdom","region_id":{"$numberInt":"1"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca8"},"country_id":"US","country_name":"United States of America","region_id":{"$numberInt":"2"}}
+{"_id":{"$oid":"6463617c2b960ad03d068ca9"},"country_id":"ZM","country_name":"Zambia","region_id":{"$numberInt":"4"}}
+{"_id":{"$oid":"6463617c2b960ad03d068caa"},"country_id":"ZW","country_name":"Zimbabwe","region_id":{"$numberInt":"4"}}

@@ -1,0 +1,19 @@
+{"_id":{"$oid":"646362002b960ad03d068d48"},"job_id":"AC_ACCOUNT","job_title":"Public Accountant","min_salary":{"$numberInt":"4200"},"max_salary":{"$numberInt":"9000"}}
+{"_id":{"$oid":"646362002b960ad03d068d49"},"job_id":"AC_MGR","job_title":"Accounting Manager","min_salary":{"$numberInt":"8200"},"max_salary":{"$numberInt":"16000"}}
+{"_id":{"$oid":"646362002b960ad03d068d4a"},"job_id":"AD_ASST","job_title":"Administration Assistant","min_salary":{"$numberInt":"3000"},"max_salary":{"$numberInt":"6000"}}
+{"_id":{"$oid":"646362002b960ad03d068d4b"},"job_id":"AD_PRES","job_title":"President","min_salary":{"$numberInt":"20000"},"max_salary":{"$numberInt":"40000"}}
+{"_id":{"$oid":"646362002b960ad03d068d4c"},"job_id":"AD_VP","job_title":"Administration Vice President","min_salary":{"$numberInt":"15000"},"max_salary":{"$numberInt":"30000"}}
+{"_id":{"$oid":"646362002b960ad03d068d4d"},"job_id":"FI_ACCOUNT","job_title":"Accountant","min_salary":{"$numberInt":"4200"},"max_salary":{"$numberInt":"9000"}}
+{"_id":{"$oid":"646362002b960ad03d068d4e"},"job_id":"FI_MGR","job_title":"Finance Manager","min_salary":{"$numberInt":"8200"},"max_salary":{"$numberInt":"16000"}}
+{"_id":{"$oid":"646362002b960ad03d068d4f"},"job_id":"HR_REP","job_title":"Human Resources Representative","min_salary":{"$numberInt":"4000"},"max_salary":{"$numberInt":"9000"}}
+{"_id":{"$oid":"646362002b960ad03d068d50"},"job_id":"IT_PROG","job_title":"Programmer","min_salary":{"$numberInt":"4000"},"max_salary":{"$numberInt":"10000"}}
+{"_id":{"$oid":"646362002b960ad03d068d51"},"job_id":"MK_MAN","job_title":"Marketing Manager","min_salary":{"$numberInt":"9000"},"max_salary":{"$numberInt":"15000"}}
+{"_id":{"$oid":"646362002b960ad03d068d52"},"job_id":"MK_REP","job_title":"Marketing Representative","min_salary":{"$numberInt":"4000"},"max_salary":{"$numberInt":"9000"}}
+{"_id":{"$oid":"646362002b960ad03d068d53"},"job_id":"PR_REP","job_title":"Public Relations Representative","min_salary":{"$numberInt":"4500"},"max_salary":{"$numberInt":"10500"}}
+{"_id":{"$oid":"646362002b960ad03d068d54"},"job_id":"PU_CLERK","job_title":"Purchasing Clerk","min_salary":{"$numberInt":"2500"},"max_salary":{"$numberInt":"5500"}}
+{"_id":{"$oid":"646362002b960ad03d068d55"},"job_id":"PU_MAN","job_title":"Purchasing Manager","min_salary":{"$numberInt":"8000"},"max_salary":{"$numberInt":"15000"}}
+{"_id":{"$oid":"646362002b960ad03d068d56"},"job_id":"SA_MAN","job_title":"Sales Manager","min_salary":{"$numberInt":"10000"},"max_salary":{"$numberInt":"20000"}}
+{"_id":{"$oid":"646362002b960ad03d068d57"},"job_id":"SA_REP","job_title":"Sales Representative","min_salary":{"$numberInt":"6000"},"max_salary":{"$numberInt":"12000"}}
+{"_id":{"$oid":"646362002b960ad03d068d58"},"job_id":"SH_CLERK","job_title":"Shipping Clerk","min_salary":{"$numberInt":"2500"},"max_salary":{"$numberInt":"5500"}}
+{"_id":{"$oid":"646362002b960ad03d068d59"},"job_id":"ST_CLERK","job_title":"Stock Clerk","min_salary":{"$numberInt":"2000"},"max_salary":{"$numberInt":"5000"}}
+{"_id":{"$oid":"646362002b960ad03d068d5a"},"job_id":"ST_MAN","job_title":"Stock Manager","min_salary":{"$numberInt":"5500"},"max_salary":{"$numberInt":"8500"}}

@@ -1,0 +1,10 @@
+{"_id":{"$oid":"646362282b960ad03d068d5b"},"employee_id":{"$numberInt":"101"},"start_date":"1989-09-21","end_date":"1993-10-27","job_id":"AC_ACCOUNT","department_id":{"$numberInt":"110"}}
+{"_id":{"$oid":"646362282b960ad03d068d5c"},"employee_id":{"$numberInt":"101"},"start_date":"1993-10-28","end_date":"1997-03-15","job_id":"AC_MGR","department_id":{"$numberInt":"110"}}
+{"_id":{"$oid":"646362282b960ad03d068d5d"},"employee_id":{"$numberInt":"102"},"start_date":"1993-01-13","end_date":"1998-07-24","job_id":"IT_PROG","department_id":{"$numberInt":"60"}}
+{"_id":{"$oid":"646362282b960ad03d068d5e"},"employee_id":{"$numberInt":"114"},"start_date":"1998-03-24","end_date":"1999-12-31","job_id":"ST_CLERK","department_id":{"$numberInt":"50"}}
+{"_id":{"$oid":"646362282b960ad03d068d5f"},"employee_id":{"$numberInt":"122"},"start_date":"1999-01-01","end_date":"1999-12-31","job_id":"ST_CLERK","department_id":{"$numberInt":"50"}}
+{"_id":{"$oid":"646362282b960ad03d068d60"},"employee_id":{"$numberInt":"176"},"start_date":"1998-03-24","end_date":"1998-12-31","job_id":"SA_REP","department_id":{"$numberInt":"80"}}
+{"_id":{"$oid":"646362282b960ad03d068d61"},"employee_id":{"$numberInt":"176"},"start_date":"1999-01-01","end_date":"1999-12-31","job_id":"SA_MAN","department_id":{"$numberInt":"80"}}
+{"_id":{"$oid":"646362282b960ad03d068d62"},"employee_id":{"$numberInt":"200"},"start_date":"1987-09-17","end_date":"1993-06-17","job_id":"AD_ASST","department_id":{"$numberInt":"90"}}
+{"_id":{"$oid":"646362282b960ad03d068d63"},"employee_id":{"$numberInt":"200"},"start_date":"1994-07-01","end_date":"1998-12-31","job_id":"AC_ACCOUNT","department_id":{"$numberInt":"90"}}
+{"_id":{"$oid":"646362282b960ad03d068d64"},"employee_id":{"$numberInt":"201"},"start_date":"1996-02-27","end_date":"1999-12-19","job_id":"MK_REP","department_id":{"$numberInt":"20"}}
