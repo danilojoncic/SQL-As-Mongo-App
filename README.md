@@ -9,6 +9,32 @@ SQL-As-Mongo-App is a simple Java Swing application that allows users to input S
 - Utilize Singleton, Adapter and Composite design patterns for efficient query conversion.
 - Display the query results in a table for easy visualization.
 
+## Query Keywords & Operators
+
+- SELECT
+- FROM
+- WHERE
+- JOIN (works for joining 2 tables/collections, joining more than 2 will not work)
+- USING
+- ORDER BY
+- ASC (by default)
+- DESC
+- AND
+- OR (logic works for infinite 'AND' or 'OR' operators, but they must not be mixed in the same query, priority and boolean logic is not present)
+- LIKE with '$' and '_'
+- > , < , = , >=, <=
+
+EXAMPLE QUERY:
+ SELECT first_name 
+        salary 
+        department_name
+ FROM employees 
+ JOIN departments 
+ USING department_id 
+ WHERE salary >= 10000 
+ AND department_name LIKE %S 
+ ORDERBY salary DESC
+
 ## Prerequisites
 
 - Java 8 or higher installed on your system.
@@ -26,7 +52,7 @@ git clone https://github.com/your-username/SQL-As-Mongo-App.git
 
 3. Ensure that you have MongoDB installed and running on the local machine or specify the MongoDB server address in the app settings.
 
-4. Configure MongoDB connection settings in `database.settings.Settings` class. Replace the placeholders with your MongoDB server credentials:
+4. Configure MongoDB connection settings in `Credentials` class if necessary. Replace the placeholders with your MongoDB server credentials:
 
 ```java
 public class Settings {
@@ -53,6 +79,6 @@ public class Settings {
 
 - **Singleton Design Pattern**: Singleton pattern is used to ensure that there is only one instance of the MongoDB database connection throughout the application's lifecycle. The `CustomMongoDatabase` class employs this pattern to provide a single point of access for connecting to the MongoDB server.
 
-- **Adapter Design Pattern**: The Adapter pattern is utilized to adapt and transform the SQL queries into MongoDB-compatible queries. The `SQLToMongoAdapter` class acts as the adapter, converting SQL objects into MongoDB objects through `.jsonify`.
+- **Adapter Design Pattern**: The Adapter pattern is utilized to adapt and transform the SQL queries into MongoDB-compatible queries. The `AdapterMDB` class acts as the adapter, converting SQL objects into MongoDB objects through `.jsonify`.
 
 - **Singleton Design Pattern**: Composite is used for easier and logical representation of a query as an object made up of clauses where each clause has its own elements, this approach makes it possible for subqueries to be implemented and used.
