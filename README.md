@@ -55,11 +55,13 @@ git clone https://github.com/your-username/SQL-As-Mongo-App.git
 4. Configure MongoDB connection settings in `Credentials` class if necessary. Replace the placeholders with your MongoDB server credentials:
 
 ```java
-public class Settings {
+public class Credentials {
+    ...
     public static final String DATABASE = "your_database_name";
     public static final String USERNAME = "your_mongodb_username";
     public static final String PASSWORD = "your_mongodb_password";
     // Update other settings as needed.
+    ...
 }
 ```
 
