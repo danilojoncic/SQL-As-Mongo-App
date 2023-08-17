@@ -5,9 +5,8 @@ import database.settings.MySettings;
 import database.settings.Settings;
 import org.bson.Document;
 import third_perspective.Clauses.*;
-import utils.Credentials;
+import utils.Constants;
 
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,10 +28,10 @@ public class AdapterMDB implements AdaptateMDB {
 
     private Settings initSettings() {
         Settings settingsImplementation = new MySettings();
-        settingsImplementation.addParameter("ip", Credentials.my_ip);
-        settingsImplementation.addParameter("database", Credentials.my_db);
-        settingsImplementation.addParameter("username", Credentials.my_username);
-        settingsImplementation.addParameter("password", Credentials.my_password);
+        settingsImplementation.addParameter("ip", Constants.my_ip);
+        settingsImplementation.addParameter("database", Constants.my_db);
+        settingsImplementation.addParameter("username", Constants.my_username);
+        settingsImplementation.addParameter("password", Constants.my_password);
         return settingsImplementation;
     }
     private void init(){

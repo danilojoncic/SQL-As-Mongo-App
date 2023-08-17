@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MyPanel extends JPanel{
-    private JTextArea textArea;
+    private MyTextPane textPane;
     private JTable table;
 
     public MyPanel() {
@@ -15,8 +15,8 @@ public class MyPanel extends JPanel{
 
     public void init(){
         this.setLayout(new BorderLayout());
-        textArea = new JTextArea();
-        JScrollPane textScrollPane = new JScrollPane(textArea);
+        textPane = new MyTextPane();
+        JScrollPane textScrollPane = new JScrollPane(textPane);
         table = new JTable();
         //novo dodato
         table.setModel(new MyTableModel());
@@ -28,12 +28,8 @@ public class MyPanel extends JPanel{
         add(splitPane,BorderLayout.CENTER);
     }
 
-    public JTextArea getTextArea() {
-        return textArea;
-    }
-
-    public void setTextArea(JTextArea textArea) {
-        this.textArea = textArea;
+    public JTextPane getTextPane() {
+        return textPane;
     }
 
     public JTable getTable() {

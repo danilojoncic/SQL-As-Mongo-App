@@ -22,10 +22,10 @@ public class UpdateController {
         mainFrame.getMyToolbar().setInputListener(new InputListener() {
             @Override
             public void listenInput(String input) {
-                Query query = Parser.getInstance().createFromString(mainFrame.getMyPanel().getTextArea().getText());
+                Query query = Parser.getInstance().createFromString(mainFrame.getMyPanel().getTextPane().getText());
                 if (!Validator.getInstance().validate(query)) {
                     JOptionPane.showMessageDialog(null, "Query is not valid!", "Error", JOptionPane.ERROR_MESSAGE);
-                    mainFrame.getMyPanel().getTextArea().setText("");
+                    mainFrame.getMyPanel().getTextPane().setText("");
                     return;
                 }
                 List<Row> rows = AdapterMDB.getInstance().returnRows(query);

@@ -1,17 +1,14 @@
 package database;
 
 import com.mongodb.MongoClient;
-import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
-import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import data.Row;
 import database.settings.Settings;
 import org.bson.Document;
-import utils.Credentials;
+import utils.Constants;
 
-import javax.print.Doc;
 import java.util.*;
 public class CustomMongoDatabase implements Database{
 
@@ -26,10 +23,10 @@ public class CustomMongoDatabase implements Database{
     }
 
     public void initConnection() throws Exception, ClassNotFoundException{
-        String ip = Credentials.my_ip;
-        String database = Credentials.my_db;
-        String username = Credentials.my_username;
-        String password = Credentials.my_password;
+        String ip = Constants.my_ip;
+        String database = Constants.my_db;
+        String username = Constants.my_username;
+        String password = Constants.my_password;
         //credentials are not used,because after passing the exam, database contents are local on mongo Compass
         mongoClient = new MongoClient(new ServerAddress("localhost", 27017));
         //to connect to an actual remote server or database change the host and port number,e.g.
