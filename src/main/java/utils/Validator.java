@@ -20,7 +20,7 @@ public class Validator {
         boolean fromPresent = false;
         boolean selectPresent = false;
 
-        for (AbsClause allClause : query.getAllClauses()) {
+        for (Composite allClause : query.getAllClauses()) {
             if (allClause instanceof From) {
                 if (!((From) allClause).getArgs().isEmpty()) {
                     fromPresent = true;

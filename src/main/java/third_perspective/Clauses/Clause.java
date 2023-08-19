@@ -20,4 +20,9 @@ public class Clause extends AbsClause {
     public void setList(List<String> list) {
         this.list = list;
     }
+
+    @Override
+    public String jsonify() {
+        return null;
+    }
 }

@@ -48,15 +48,15 @@ public class AdapterMDB implements AdaptateMDB {
         List<Document> docs = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
         sb.append("db.");
-        for (AbsClause absClause : query.getAllClauses()) {
+        for (Composite absClause : query.getAllClauses()) {
             if(absClause instanceof From){
-                docs.add(Document.parse(absClause.Jsonify()));
-                sb.append(absClause.Jsonify());
+                docs.add(Document.parse(((From) absClause).Jsonify()));
+                sb.append(((From) absClause).Jsonify());
             }
         }
         sb.append(".find(");
         sb.append("{");
-        for(AbsClause absClause : query.getAllClauses()){
+        for(Composite absClause : query.getAllClauses()){
             if (absClause instanceof Select){
                 if (((Select) absClause).getSelectedColumns().get(0).equalsIgnoreCase("*")) {
                     docs.add(Document.parse("{}"));
@@ -64,22 +64,22 @@ public class AdapterMDB implements AdaptateMDB {
                     break;
                 }
                 sb.append(",");
-                docs.add(Document.parse(absClause.Jsonify()));
-                sb.append(absClause.Jsonify());
+                docs.add(Document.parse(((Select) absClause).Jsonify()));
+                sb.append(((Select) absClause).Jsonify());
             }
         }
-        for(AbsClause absClause: query.getAllClauses()){
+        for(Composite absClause: query.getAllClauses()){
             if (absClause instanceof Where){
-                System.out.println(absClause.Jsonify());
-                docs.add(Document.parse(absClause.Jsonify()));
+                System.out.println(((Where) absClause).Jsonify());
+                docs.add(Document.parse(((Where) absClause).Jsonify()));
                 //System.out.println(absClause.Jsonify());
-                sb.append(absClause.Jsonify());
+                sb.append(((Where) absClause).Jsonify());
             }
         }
 
-        for (AbsClause absClause : query.getAllClauses()) {
+        for (Composite absClause : query.getAllClauses()) {
             if(absClause instanceof Order_By){
-                docs.add(Document.parse(absClause.Jsonify()));
+                docs.add(Document.parse(((Order_By) absClause).Jsonify()));
             }
         }
         sb.append(")");

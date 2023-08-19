@@ -21,7 +21,7 @@ public class Parser {
     }
 
     public Query createFromString(String input){
-        Query query = new Query(new ArrayList<AbsClause>());
+        Query query = new Query(new ArrayList<Composite>());
         String[] parts = input.split("\\s");
         for(int i = 0; i < parts.length;i++){
             Clause clause;
@@ -76,7 +76,7 @@ public class Parser {
         return query;
     }
     private Query createSubQuery(String input){
-        Query query = new Query(new ArrayList<AbsClause>());
+        Query query = new Query(new ArrayList<Composite>());
         String[] parts = input.split("\\s");
         for(int i = 0; i < parts.length;i++){
             Clause clause;
