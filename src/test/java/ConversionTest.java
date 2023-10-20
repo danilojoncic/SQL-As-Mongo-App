@@ -36,6 +36,7 @@ public class ConversionTest {
         docs = AdapterMDB.getInstanceForTest().generateMongoDBQuery(Parser.getInstance().createFromString(sql5));
         Assertions.assertNotNull(docs);
     }
+    //
     @Test
     public void createdDocumentStringTest(){
         docs = AdapterMDB.getInstanceForTest().generateMongoDBQuery(Parser.getInstance().createFromString(sql1));
