@@ -54,16 +54,13 @@ public class CustomMongoDatabase implements Database{
             this.initConnection();
             MongoDatabase database = mongoClient.getDatabase("hr");
             Document fromDoc = docs.get(0);
-            String cas = docs.get(0).toJson().toString();
-            String useful[] = cas.split("\"");
-            String tables[] = useful[0].split("\\{");
-            String table = useful[1];
-
+            Object[] strings = fromDoc.keySet().toArray();
+            String table = (String)strings[0];
 
             Document column = docs.get(1);
             Document codition = Document.parse("{}");
             Document sort =  Document.parse("{}");
-
+            //we dont know if the condition will be used, thats why for each
             for(Document doc : docs){
                 if(doc.toJson().toString().contains("$")){
                     codition = doc;
@@ -77,35 +74,9 @@ public class CustomMongoDatabase implements Database{
             }
             Document joinColumns = returnForJoinColumns(table,docs.get(1),"joinResult");
             MongoCursor<Document> cursor = null;
-            if(docs.get(0).toJson().toString().contains("join")){
-                System.out.println("JOIN DIO");
-                String from = null;
-                String to = null;
-                String zajednicko = null;
-                String glavnica = docs.get(0).toJson().toString();
-                String navodnici[] = glavnica.split("\"");
-                from = navodnici[1];
-                to = navodnici[5];
-                zajednicko = navodnici[9];
-                Document lookup = Document.parse("{\n" +
-                        "  $lookup: {\n" +
-                        "    from: \"" + to + "\",\n" +
-                        "    localField: \"" + zajednicko + "\",\n" +
-                        "    foreignField: \"" + zajednicko + "\",\n" +
-                        "    as: \"joinResult\"\n" +
-                        "  }\n" +
-                        "}");
-                Document unwind = Document.parse("{ $unwind: \"$joinResult\" }");
-                List<Document> joinDocs = new ArrayList<>();
-                Document matchDoc = Document.parse("{}");
-                if(docs.size() > 2 && !(docs.get(2).toJson().toString().equals("{}"))){
-                    matchDoc = returnWhereMatchDocument(table,docs.get(2),"joinResult");
-                    joinDocs.add(matchDoc);
-                }
-                joinDocs.add(lookup);
-                joinDocs.add(unwind);
+            if(docs.get(0).keySet().contains("join")){
+                List<Document> joinDocs = getJoinDocs(docs, table);
                 Document sortDoc = Document.parse("{}");
-
                 if(docs.size() == 3 && !sort.toJson().toString().equals("{}")){
                     sortDoc = returnOrderBySortDocument(table,docs.get(3),"joinResult");
                     joinDocs.add(sortDoc);
@@ -153,6 +124,30 @@ public class CustomMongoDatabase implements Database{
         }
         return rows;
     }
+    private List<Document> getJoinDocs(List<Document> docs, String table) {
+        Object[] joinStrings = docs.get(0).keySet().toArray();
+        String to = (String)joinStrings[2];
+        String zajednicko = (String)joinStrings[4];
+        ;
+        Document lookup = Document.parse("{\n" +
+                "  $lookup: {\n" +
+                "    from: \"" + to + "\",\n" +
+                "    localField: \"" + zajednicko + "\",\n" +
+                "    foreignField: \"" + zajednicko + "\",\n" +
+                "    as: \"joinResult\"\n" +
+                "  }\n" +
+                "}");
+        Document unwind = Document.parse("{ $unwind: \"$joinResult\" }");
+        List<Document> joinDocs = new ArrayList<>();
+        Document matchDoc = Document.parse("{}");
+        if(docs.size() > 2 && !(docs.get(2).toJson().toString().equals("{}"))){
+            matchDoc = returnWhereMatchDocument(table, docs.get(2),"joinResult");
+            joinDocs.add(matchDoc);
+        }
+        joinDocs.add(lookup);
+        joinDocs.add(unwind);
+        return joinDocs;
+    }
 
     private Document returnOrderBySortDocument(String table, Document orderByDocument,String alias){
         Document doc = null;
@@ -164,13 +159,11 @@ public class CustomMongoDatabase implements Database{
 
 
     private Document returnWhereMatchDocument(String table,Document whereDocument,String alias){
-        //HashMap magic
         String json = "{ $match: " + whereDocument.toJson() + " }";
         Document matchDoc = Document.parse(json);
         return matchDoc;
     }
     private Document returnForJoinColumns(String fromTable,Document theDocument,String alias){
-        //
         Document doc = null;
         StringBuilder sb = new StringBuilder();
         int totalKeys = theDocument.keySet().size();

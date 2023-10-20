@@ -26,6 +26,12 @@ public class AdapterMDB implements AdaptateMDB {
         return instance;
     }
 
+    public static AdapterMDB getInstanceForTest(){
+        if(instance == null){
+            instance = new AdapterMDB();
+        }
+        return instance;
+    }
     public static Settings initSettings() {
         Settings settingsImplementation = new MySettings();
         settingsImplementation.addParameter("ip", Constants.my_ip);
@@ -46,34 +52,25 @@ public class AdapterMDB implements AdaptateMDB {
     }
     public List<Document> generateMongoDBQuery(Query query) {
         List<Document> docs = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        sb.append("db.");
         for (Composite absClause : query.getAllClauses()) {
             if(absClause instanceof From){
                 docs.add(Document.parse(((From) absClause).Jsonify()));
-                sb.append(((From) absClause).Jsonify());
+
             }
         }
-        sb.append(".find(");
-        sb.append("{");
         for(Composite absClause : query.getAllClauses()){
             if (absClause instanceof Select){
                 if (((Select) absClause).getSelectedColumns().get(0).equalsIgnoreCase("*")) {
                     docs.add(Document.parse("{}"));
-                    sb.append("");
                     break;
                 }
-                sb.append(",");
                 docs.add(Document.parse(((Select) absClause).Jsonify()));
-                sb.append(((Select) absClause).Jsonify());
+
             }
         }
         for(Composite absClause: query.getAllClauses()){
             if (absClause instanceof Where){
-                System.out.println(((Where) absClause).Jsonify());
                 docs.add(Document.parse(((Where) absClause).Jsonify()));
-                //System.out.println(absClause.Jsonify());
-                sb.append(((Where) absClause).Jsonify());
             }
         }
 
@@ -82,8 +79,6 @@ public class AdapterMDB implements AdaptateMDB {
                 docs.add(Document.parse(((Order_By) absClause).Jsonify()));
             }
         }
-        sb.append(")");
-        System.out.println(docs);
         return docs;
     }
 

@@ -11,7 +11,6 @@ public class ParserTest {
     String sql3 = "select last_name department_id from employees where last_name like $S and department_id > 50";
     String sql4 = "select first_name salary department_id department_name from employees join departments using depratments where salary > 20000 or department_id = 20";
     String sql5 = "select department_name location_id street_address from departments join locations using location_id";
-    Query query;
 
     @Test
     public void queryObjectNotNullTest() {
