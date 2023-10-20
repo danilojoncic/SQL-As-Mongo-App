@@ -21,9 +21,6 @@ public class CustomMongoDatabase implements Database{
         this.settings = settings;
         tabKol = formHashMap();
     }
-    public CustomMongoDatabase(Settings settings, int test){
-        this.settings = settings;
-    }
 
     public void initConnection() throws Exception, ClassNotFoundException{
         String ip = Constants.my_ip;

@@ -26,7 +26,7 @@ public class AdapterMDB implements AdaptateMDB {
         return instance;
     }
 
-    private Settings initSettings() {
+    public static Settings initSettings() {
         Settings settingsImplementation = new MySettings();
         settingsImplementation.addParameter("ip", Constants.my_ip);
         settingsImplementation.addParameter("database", Constants.my_db);
